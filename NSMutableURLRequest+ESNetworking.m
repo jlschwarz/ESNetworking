@@ -24,7 +24,7 @@
 + (NSString *)urlEncodeString:(NSString *)string
 {
 	NSString *encodedString;
-	CFStringRef	escapeChars = CFSTR("/&?=+");
+	CFStringRef	escapeChars = CFSTR("/&?=+!@$()*;:',");
 	CFStringRef	encodedText = CFURLCreateStringByAddingPercentEscapes(NULL, 
 																	  (__bridge CFStringRef)string, 
 																	  NULL, 
